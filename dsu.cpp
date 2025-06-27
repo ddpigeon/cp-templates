@@ -4,9 +4,9 @@ struct ufds{
  
     void init(int nn){
         n = nn;
-        root.resize(n + 1);
-        sz.resize(n + 1, 1);
-        for (int i = 1; i <= n; i++) root[i] = i;
+        root.resize(n);
+        sz.resize(n, 1);
+        iota(root.begin(), root.end(), 0);
     }
  
     int find(int x){
